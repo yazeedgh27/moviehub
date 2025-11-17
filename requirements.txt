@@ -1,1 +1,8 @@
 flask
+gunicorn
+jinja2
+werkzeug
+itsdangerous
+click
+sqlite3-binary
+
