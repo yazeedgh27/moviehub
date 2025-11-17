@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="margin-left: 25px;">Browse by Genre</h2>
+
+{% for genre, movies in genres.items() %}
+
+<h3 style="margin-left: 25px; margin-top: 30px;">🎬 {{ genre }}</h3>
+
+<div class="movie-grid">
+    {% for movie in movies %}
+    <div class="movie-card">
+        <a href="/movie/{{ movie.id }}">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+            <h4>{{ movie.title }}</h4>
+            <p>⭐ {{ movie.rating }} | {{ movie.year }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endfor %}
+{% endblock %}

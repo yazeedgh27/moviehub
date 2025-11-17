@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="details-container">
+    <img class="details-poster" src="{{ movie.poster }}" alt="{{ movie.title }} poster">
+
+    <div class="details-info">
+        <h2>{{ movie.title }}</h2>
+        <p><strong>Rating:</strong> ⭐ {{ movie.rating }}</p>
+        <p><strong>Genre:</strong> {{ movie.genre }}</p>
+        <p><strong>Release Year:</strong> {{ movie.year }}</p>
+        <hr>
+        <p>{{ movie.description }}</p>
+    </div>
+</section>
+{% endblock %}

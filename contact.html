@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="contact-container">
+    <h2>Contact Us</h2>
+    <p class="contact-subtitle">We’d love to hear from you! Send us a message.</p>
+
+    <form action="/contact" method="POST" class="contact-form">
+        <label>Your Name</label>
+        <input type="text" name="name" required placeholder="Enter your name">
+
+        <label>Email Address</label>
+        <input type="email" name="email" required placeholder="Enter your email">
+
+        <label>Message</label>
+        <textarea name="message" required placeholder="Type your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+{% endblock %}
+

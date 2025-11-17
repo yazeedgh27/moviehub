@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div>
+        <h1>Welcome to MovieHub</h1>
+        <p>Your gateway to a world of cinema.</p>
+    </div>
+</div>
+
+<!-- FEATURED MOVIES -->
+<h2 style="margin-left: 25px; margin-top: 25px;">Featured Movies</h2>
+
+<div class="movie-grid">
+    {% for movie in movies %}
+    <div class="movie-card">
+        <a href="/movie/{{ movie.id }}" style="text-decoration: none; color: inherit;">
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+            <h4>{{ movie.title }}</h4>
+            <p>⭐ {{ movie.rating }} | {{ movie.year }}</p>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
